@@ -9,7 +9,7 @@
     'description': '''Auto fill name, serial number, note and used in location''',
     'depends': ['stock', 'maintenance'],
     'data': [
-        'views/stock_lot.xml',
+        'views/stock_production_lot.xml',
         'views/maintenance_equipment.xml',
     ],
     'installable': True,

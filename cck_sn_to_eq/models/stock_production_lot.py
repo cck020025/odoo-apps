@@ -1,8 +1,8 @@
 from odoo import fields, models
 
 
-class StockLot(models.Model):
-    _inherit = 'stock.lot'
+class StockProductionLot(models.Model):
+    _inherit = 'stock.production.lot'
 
     product_tracking = fields.Selection(related='product_id.tracking')
 
