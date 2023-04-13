@@ -18,6 +18,7 @@ class StockProductionLot(models.Model):
         action['target'] = 'new'
         if eq:
             action['res_id'] = eq.id
+            action['context'] = {'create': False}
         else:
             action['context'] = {
                 'default_name': self.product_id.name,
@@ -26,5 +27,6 @@ class StockProductionLot(models.Model):
                 'default_effective_date': self.create_date,
                 'default_location': self.quant_ids.filtered(lambda q: q.location_id.usage == 'internal' and q.quantity > 0).location_id.display_name or '',
                 'default_lot_id': self.id,
+                'create': False
             }
         return action
