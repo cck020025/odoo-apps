@@ -6,6 +6,7 @@
     'version': '1.0.0',
     'category': 'Inventory',
     'license': 'LGPL-3',
+    'description': '''Auto fill name, serial number, note and used in location''',
     'depends': ['stock', 'maintenance'],
     'data': [
         'views/stock_lot.xml',
@@ -14,4 +15,7 @@
     'installable': True,
     'application': False,
     'auto_install': False,
+    'images': [
+        'static/description/main.png'
+    ]
 }
