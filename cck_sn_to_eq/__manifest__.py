@@ -3,7 +3,7 @@
     "name": "Create Maintenance Equipment by SN",
     'author': 'Cck020025',
     'website': 'https://github.com/cck020025',
-    'version': '1.0.0',
+    'version': '1.0.1',
     'category': 'Inventory',
     'license': 'LGPL-3',
     'description': '''Auto fill name, serial number, note and used in location''',
