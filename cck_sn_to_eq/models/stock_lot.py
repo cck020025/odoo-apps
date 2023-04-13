@@ -15,6 +15,7 @@ class StockLot(models.Model):
         action = self.env['ir.actions.act_window']._for_xml_id('maintenance.hr_equipment_action')
         action['view_mode'] = 'form'
         action['views'] = [(False, 'form')]
+        action['target'] = 'new'
         if eq:
             action['res_id'] = eq.id
         else:
@@ -26,5 +27,4 @@ class StockLot(models.Model):
                 'default_location': self.quant_ids.filtered(lambda q: q.location_id.usage == 'internal' and q.quantity > 0).location_id.display_name or '',
                 'default_lot_id': self.id,
             }
-            action['target'] = 'new'
         return action
