@@ -23,7 +23,6 @@ class StockProductionLot(models.Model):
             action['context'] = {
                 'default_name': self.product_id.name,
                 'default_serial_no': self.ref or self.name,
-                'default_note': self.note,
                 'default_effective_date': self.create_date,
                 'default_location': self.quant_ids.filtered(lambda q: q.location_id.usage == 'internal' and q.quantity > 0).location_id.display_name or '',
                 'default_lot_id': self.id,
