@@ -10,7 +10,7 @@
             </field>
             <button name="action_lot_open_quants" position="before">
                 <button name="action_open_eq" icon="fa-legal" class="oe_stat_button" string="Equipment" type="object"
-                        attrs="{'invisible': [('product_tracking', '!=', 'serial')]}"
+                        invisible="product_tracking != 'serial'"
                         groups="maintenance.group_equipment_manager"/>
             </button>
         </field>
